@@ -12,7 +12,7 @@
       <!-- 左侧边栏区域 -->
       <el-aside :width="isCollapse ? '64px' : '200px'">
         <div class="toggle-button" @click="toggleCollapse">|||</div>
-        <el-menu background-color="#333744" text-color="#fff" active-text-color="#ffd04b" unique-opened :collapse="isCollapse" :collapse-transition='isCollapse' router :default-active="activePath">
+        <el-menu background-color="#333744" text-color="#fff" active-text-color="#409EFF" unique-opened :collapse="isCollapse" :collapse-transition='isCollapse' router :default-active="activePath">
           <!-- 一级菜单 -->
           <el-submenu :index="item.id + ''" v-for="item in menulist" :key="item.id">
             <!-- 一级菜单的模板区域 -->
@@ -83,7 +83,7 @@ export default {
         return this.$message.error(res.meta.msg)
       } else {
         this.menulist = res.data
-        console.log(res)
+        // console.log(res)
       }
     },
     // 点击按钮切换菜单的折叠与展开
